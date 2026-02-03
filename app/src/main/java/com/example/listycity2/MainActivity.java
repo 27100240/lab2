@@ -39,14 +39,11 @@ public class MainActivity extends AppCompatActivity {
         dataList = new ArrayList<>();
         dataList.addAll(Arrays.asList(cities));
 
-        // Keep your row layout (content.xml)
         cityAdapter = new ArrayAdapter<>(this, R.layout.content, dataList);
         cityList.setAdapter(cityAdapter);
 
-        // Tap a city to "select" it for deletion
         cityList.setOnItemClickListener((parent, view, position, id) -> selectedPosition = position);
 
-        // ADD CITY
         addBtn.setOnClickListener(v -> {
             EditText input = new EditText(this);
             input.setHint("Enter city name");
@@ -69,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
                     .show();
         });
 
-        // DELETE CITY (delete selected)
         deleteBtn.setOnClickListener(v -> {
             if (selectedPosition < 0 || selectedPosition >= dataList.size()) {
                 Toast.makeText(this, "Tap a city to select it first.", Toast.LENGTH_SHORT).show();
