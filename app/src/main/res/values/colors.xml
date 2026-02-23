@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="bg_main">#FFE4EC</color>      <!-- blush -->
+    <color name="list_bg">#E6D6FF</color>      <!-- lavender -->
+    <color name="button_bg">#F06292</color>    <!-- rose -->
+    <color name="button_text">#FFFFFF</color>
+    <color name="row_selected">#FFB3C6</color> <!-- darker blush -->
 </resources>

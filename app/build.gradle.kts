@@ -1,6 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
+
+    // Add the Google services Gradle plugin
+    id("com.google.gms.google-services")
 }
+
 
 android {
     namespace = "com.example.listycity2"
@@ -33,7 +37,14 @@ android {
     }
 }
 
+
 dependencies {
+    // Firebase BoM + Analytics
+    implementation("com.google.firebase:firebase-firestore")
+    implementation(platform("com.google.firebase:firebase-bom:34.9.0"))
+    implementation("com.google.firebase:firebase-analytics")
+
+    // Usual libs
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
